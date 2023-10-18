@@ -29,6 +29,8 @@ class ReviewRepository extends BaseRepository {
         "rating",
         "comment",
         [col("User.email"), "userEmail"],
+
+        // TODO: Include property movieTitle on getMovieReviews by joining table review and movie using sequelize
       ],
       include: [
         {

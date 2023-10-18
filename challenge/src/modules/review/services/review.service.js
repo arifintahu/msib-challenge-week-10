@@ -16,7 +16,7 @@ class ReviewService {
 
     // TODO: Add movieId validation by calling MovieService.getMovieById
 
-    // TODO: Validate review can be written for each userId and movieId
+    // TODO: Validate review uniqueness, so it can't be written twice for each userId and movieId
 
     return this.#reviewRepository.createReview({
       userId,
