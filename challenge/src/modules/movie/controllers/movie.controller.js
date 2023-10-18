@@ -33,7 +33,7 @@ class MovieController extends BaseController {
   getMovieById = async (req, res, next) => {
     try {
       await validateRequest(req, requirements.getMovieById);
-      const result = await this.#movieService.getMovieById(req.params.id);
+      const result = await this.#movieService.getMovieById(req.params.movieId);
       this.handleSuccessResponse(res, result);
     } catch (err) {
       next(err);

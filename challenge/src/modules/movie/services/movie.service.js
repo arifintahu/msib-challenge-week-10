@@ -32,12 +32,12 @@ class MovieService {
     return movies;
   };
 
-  getMovieById = async (id) => {
-    if (!Number.isInteger(Number(id))) {
-      throw new Error("Invalid id");
+  getMovieById = async (movieId) => {
+    if (!Number.isInteger(Number(movieId))) {
+      throw new Error("Invalid movieId");
     }
 
-    const movie = await this.#movieRepository.getMovieById(id);
+    const movie = await this.#movieRepository.getMovieById(movieId);
     if (!movie) {
       throw new Error("Movie not found");
     }

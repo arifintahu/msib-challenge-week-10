@@ -27,8 +27,8 @@ class MovieRepository extends BaseRepository {
     });
   };
 
-  getMovieById = (id) => {
-    return this.#movie.findByPk(id);
+  getMovieById = (movieId) => {
+    return this.#movie.findByPk(movieId);
   };
 }
 

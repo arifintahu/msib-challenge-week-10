@@ -11,7 +11,7 @@ const requirements = {
     query("page").isInt({ min: 1 }).optional({ nullable: true }),
     query("limit").isInt({ min: 10, max: 50 }).optional({ nullable: true }),
   ],
-  getMovieById: [param("id").isInt({ min: 1 })],
+  getMovieById: [param("movieId").isInt({ min: 1 })],
 };
 
 module.exports = requirements;

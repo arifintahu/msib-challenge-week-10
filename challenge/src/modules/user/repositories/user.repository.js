@@ -26,8 +26,8 @@ class UserRepository extends BaseRepository {
     });
   };
 
-  getUserById = (id) => {
-    return this.#user.findByPk(id, {
+  getUserById = (userId) => {
+    return this.#user.findByPk(userId, {
       attributes: ["id", "email", "role"],
     });
   };

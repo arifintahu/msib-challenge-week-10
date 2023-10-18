@@ -64,12 +64,12 @@ class UserService {
     return users;
   };
 
-  getUserById = async (id) => {
-    if (!Number.isInteger(id)) {
-      throw new Error("Invalid id");
+  getUserById = async (userId) => {
+    if (!Number.isInteger(Number(userId))) {
+      throw new Error("Invalid userId");
     }
 
-    const user = await this.#userRepository.getUserById(id);
+    const user = await this.#userRepository.getUserById(userId);
     if (!user) {
       throw new Error("User not found");
     }
