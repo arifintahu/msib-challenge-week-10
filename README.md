@@ -4,10 +4,10 @@ In this challenge, we will build a movie reviewer APi with modular monolith desi
 This project have three modules: movie, review, and user module. Your task is to complete the project based on the challenge objectives.
 
 ## Objectives
-1. Add userId validation by calling UserService.getUserById
-2. Add movieId validation by calling MovieService.getMovieById
-3. Validate review uniqueness, so it can't be written twice for each userId and movieId
-4. Include property movieTitle on getMovieReviews by joining table review and movie using sequelize
+1. Add `userId` validation by calling `UserService.getUserById`
+2. Add `movieId` validation by calling `MovieService.getMovieById`
+3. Validate review uniqueness, so it can't be written twice for each `userId` and `movieId`
+4. Include property `movieTitle` on `getMovieReviews` by joining table review and movie using sequelize
 
 ## How to Submit
 
@@ -22,3 +22,7 @@ This project have three modules: movie, review, and user module. Your task is to
 9. Run your server using `node yourfolder/src/index.js`
 10. Commit and push your changes
 11. Create a Pull Request to original repository
+
+## References
+- [Modular Monolith: A Primer](https://www.kamilgrzybek.com/blog/posts/modular-monolith-primer)
+- [Awesome Modular Monolith](https://awesome-architecture.com/modular-monolith/#articles)
