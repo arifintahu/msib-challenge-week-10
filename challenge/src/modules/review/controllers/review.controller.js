@@ -15,6 +15,7 @@ class ReviewController extends BaseController {
       await validateRequest(req, requirements.createReview);
       const result = await this.#reviewService.createReview({
         ...req.body,
+        userId: req.userdata.id,
         movieId: req.params.movieId,
       });
       this.handleSuccessResponse(res, result);

@@ -3,7 +3,6 @@ const { body, param, query } = require("express-validator");
 const requirements = {
   createReview: [
     param("movieId").isInt({ min: 1 }),
-    body("userId").isInt({ min: 1 }),
     body("rating").isInt({ min: 1, max: 5 }),
     body("comment").isString().optional({ nullable: true }),
   ],
